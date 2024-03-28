@@ -1,0 +1,156 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+    padding:0;
+    margin:0;
+}
+
+/* CSS HEX */
+/* --orange-peel: #faa33c;
+--saffron: #fdc758;
+--bone: #ded5c3;
+--black: #000000;
+--caribbean-current: #407076; */
+
+h1, h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+i {
+  font-size: 24px;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ded5c3;
+}
+
+.brand-box {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.cookie-icon {
+  width: 75px;
+  height: 75px;
+}
+
+.brand-name {
+  
+}
+
+.social-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.hero {
+  background-image: url("images/lightbox-cookie-vertical.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-color: #ffffff;
+  height: 400px;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero-call {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.no-margin {
+  margin: 0px;
+}
+
+.glow {
+  text-shadow: 0 0 10px #faa33c;
+}
+
+.g-transition {
+  transition: 0.5s;
+}
+
+.g-transition:hover {
+  text-shadow: 0 0 30px #407076;
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name
+ <weight>: Use a value from 100 to 900 */
+.montserrat-regular {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.great-vibes-regular {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media screen and (min-width: 600px) {
+  h1, h2 {
+    font-size: 60px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  h6 {
+    font-size: 28px;
+  }
+
+  i {
+    font-size: 48px;
+  }
+
+  .banner {
+    padding-right: 40px;
+  }
+  
+  .cookie-icon {
+    width: 150px;
+    height: 150px;
+  }
+
+  .social-box {
+    gap: 20px;
+  }
+  
+  .hero {
+    background-image: url("images/lightbox-cookie-horizontal.jpg");
+    background-position: right;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 450px;
+    padding: 40px;
+  }
+
+  .hero-text {
+    flex-direction: column;
+  }
+}
