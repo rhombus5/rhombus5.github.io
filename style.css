@@ -62,7 +62,7 @@ i {
 }
 
 .hero {
-  background-image: url("images/lightbox-cookie-vertical.jpg");
+  background-image: url("images/hero-cookie-vertical.jpg");
   background-size: cover;
   background-position: bottom;
   background-color: #ffffff;
@@ -141,7 +141,7 @@ i {
   }
   
   .hero {
-    background-image: url("images/lightbox-cookie-horizontal.jpg");
+    background-image: url("images/hero-cookie-horizontal.jpg");
     background-position: right;
     display: flex;
     justify-content: left;
