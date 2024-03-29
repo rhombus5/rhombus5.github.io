@@ -33,6 +33,14 @@ h6 {
 
 i {
   font-size: 24px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+i:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 .banner {
@@ -71,15 +79,65 @@ i {
   background-size: cover;
   background-position: bottom;
   background-color: #ffffff;
-  height: 400px;
-  padding: 20px;
+  height: 70vh;
   text-align: center;
+}
+
+.hero-text {
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  gap: 10px;
+  padding: 20px;
 }
 
 .hero-call {
   display: flex;
   justify-content: center;
   gap: 10px;
+}
+
+.call {
+  outline: 2px solid #000000;
+  border-radius: 5px;
+  background: white;
+  transition: 0.5s;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.call:hover {
+  background: #faa33c;
+  transition: 0.5s;
+  cursor: pointer;
+  color: white;
+}
+
+.viewer {
+  background-color: #ffffff;
+}
+
+.baking-sheet {
+  background-image: url("images/baking-sheet-vertical.png");
+  /* background-size: 100% calc(max(50px, 100%)); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffffff;
+  /* height: 400px; */
+  text-align: center;
+  display: flex;  
+  flex-wrap: wrap;
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  gap: 10px;
+}
+
+.cookie {
+  width: 25%;
+  height: 25%;
+  cursor: pointer;
+  border-radius: 100%;
 }
 
 .no-margin {
@@ -90,18 +148,6 @@ i {
   text-shadow: 0 0 10px #faa33c;
 }
 
-.g-transition {
-  transition: 0.5s;
-}
-
-.g-transition:hover {
-  text-shadow: 0 0 30px #407076;
-  transform: scale(1.2);
-  transition: 0.5s;
-}
-
-/* <uniquifier>: Use a unique and descriptive class name
- <weight>: Use a value from 100 to 900 */
 .montserrat-regular {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -113,6 +159,14 @@ i {
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
+}
+
+.no-show {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 @media screen and (min-width: 600px) {
@@ -156,6 +210,28 @@ i {
   }
 
   .hero-text {
+    display: flex;
     flex-direction: column;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    height: 100%;
+    justify-content: center;
+  }
+
+  .baking-sheet {
+    background-image: url("images/baking-sheet-horizontal.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 450px; */
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    gap: 50px;
+  }
+
+  .cookie {
+    width: 20%;
+    height: 20%;
   }
 }
