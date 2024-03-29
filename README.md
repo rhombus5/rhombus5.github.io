@@ -1,3 +1,3 @@
 # CSC110
 
-https://leornungcniht.github.io/
+https://rhombus5.github.io/
