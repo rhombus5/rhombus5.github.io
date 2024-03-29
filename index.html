@@ -15,7 +15,7 @@
 
 <body>
   <div class="banner">
-    <div class="brand-box">
+    <div class="button brand-box" onclick="showpage(this, 'home-page')">
       <img src="images/cookie-icon.png" alt="cookie icon" class="cookie-icon">
       <div class="brand-name">
         <h1 class="great-vibes-regular no-margin glow">Andie's Bakery</h1>
@@ -23,25 +23,44 @@
       </div>
     </div>
     <div class="social-box">
-      <i class="fa-brands fa-instagram g-transition"></i>
-      <i class="fa-brands fa-pinterest g-transition"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-pinterest"></i>
       <!-- <i class="fa-solid fa-location-dot"></i>
       <i class="fa-solid fa-phone"></i> -->
     </div>
   </div>
-  <div class="hero">
-    <div class="hero-text">
-      <h2 class="montserrat-regular no-margin glow">Tasty. Made 4 U!</h2>
-      <div class="hero-call">
-        <h6 class="montserrat-regular no-margin glow g-transition">browse ></h6>
-        <h6 class="montserrat-regular no-margin glow g-transition">buy ></h6>
+  <div class="page show" id="home-page">
+    <div class="hero">
+      <div class="hero-text">
+        <h2 class="montserrat-regular no-margin glow">Tasty. Made for you!</h2>
+        <div class="hero-call">
+          <h6 class="button montserrat-regular no-margin glow call" onclick="showpage(this, 'browse-page')">browse ></h6>
+          <h6 class="button montserrat-regular no-margin glow call" onclick="showpage(this, 'buy-page')">buy ></h6>
+        </div>
       </div>
     </div>
+  </div>
+  <div class="page no-show" id="browse-page">
+    <div class="viewer">
+      <div class="baking-sheet">
+        <img class="cookie" src="images/cookies/blueberry twirl.png" alt="blueberry twirl">
+        <img class="cookie" src="images/cookies/chocolate chip.png" alt="chocolate chip">
+        <img class="cookie" src="images/cookies/chocolate.png" alt="chocolate">
+        <img class="cookie" src="images/cookies/craisin.png" alt="craisin">
+        <img class="cookie" src="images/cookies/frosted stripes.png" alt="frosted stripes">
+        <img class="cookie" src="images/cookies/macadamia nut.png" alt="macadamia nut">
+        <img class="cookie" src="images/cookies/peanut butter.png" alt="peanut butter">
+        <img class="cookie" src="images/cookies/snickerdoodle.png" alt="snickerdoodle">
+      </div>
+    </div>
+  </div>
+  <div class="page no-show" id="buy-page">
+    Hello, you found the buy page.
   </div>
   <div class="banner">
     <h3 class="montserrat-regular no-margin">Contact:</h3>
     <h3 class="montserrat-regular no-margin"><a href= "tel: 7029129397">(702) 912-9397</a></h3>
-    <h3 class="montserrat-regular no-margin"><a href= "joseph.hughes@svu.edu" target="_blank" rel="noopener noreferrer">joseph.hughes@svu.edu</a></h3>
+    <h3 class="montserrat-regular no-margin"><a href= "mailto: joseph.hughes@svu.edu">joseph.hughes@svu.edu</a></h3>
   </div>
   <script src="script.js"></script>
 </body>
