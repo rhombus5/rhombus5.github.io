@@ -64,7 +64,7 @@ i:hover {
 }
 
 .brand-name {
-  
+  cursor: pointer;
 }
 
 .social-box {
