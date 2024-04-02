@@ -45,10 +45,12 @@ i:hover {
 
 .banner {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   background-color: #ded5c3;
+  gap: 10px;
 }
 
 .brand-box {
@@ -67,7 +69,7 @@ i:hover {
   cursor: pointer;
 }
 
-.social-box {
+.menu-box {
   display: flex;
   justify-content: space-between;
   gap: 10px;
@@ -109,6 +111,34 @@ i:hover {
   transition: 0.5s;
   cursor: pointer;
   color: white;
+}
+
+.about-mini {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: #faa33c;
+}
+
+.about-image {
+  height: 300px;
+  border-radius: 5px;
+}
+
+.about-mini-text {
+  display: block;
+  padding: 10px;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: #ffffff;
 }
 
 .viewer {
@@ -188,6 +218,7 @@ i:hover {
 
   .banner {
     padding-right: 40px;
+    justify-content: center;
   }
   
   .cookie-icon {
@@ -195,7 +226,7 @@ i:hover {
     height: 100px;
   }
 
-  .social-box {
+  .menu-box {
     gap: 20px;
   }
   

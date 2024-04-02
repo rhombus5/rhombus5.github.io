@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>A Dash of Sugar</title>
+  <title>A DASH of Sugar</title>
   <link rel="icon" type="image/x-icon" href="/images/cookie-icon.ico">
   <link href="style.css" rel="stylesheet" type="text/css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,11 +22,12 @@
         <h3 class="montserrat-regular no-margin">The best baked goods in town!</h3>
       </div>
     </div>
-    <div class="social-box">
-      <i class="fa-brands fa-instagram"></i>
-      <i class="fa-brands fa-pinterest"></i>
-      <!-- <i class="fa-solid fa-location-dot"></i>
-      <i class="fa-solid fa-phone"></i> -->
+    <div class="menu-box">
+      <h6 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'home-page')">Home</h6>
+      <h6 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'browse-page')">Browse</h6>
+      <h6 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'buy-page')">Buy</h6>
+      <h6 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'about-page')">About</h6>
+      <h6 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'contact-page')">Contact</h6>
     </div>
   </div>
   <div class="page show" id="home-page">
@@ -37,6 +38,14 @@
           <h6 class="button montserrat-regular no-margin glow call" onclick="showpage(this, 'browse-page')">browse ></h6>
           <h6 class="button montserrat-regular no-margin glow call" onclick="showpage(this, 'buy-page')">buy ></h6>
         </div>
+      </div>
+    </div>
+    <div class="about-mini" id="about-mini">
+      <img class="about-image" src="images/Andie Hughes.jpg" alt="Andie Hughes">
+      <div class="about-mini-text" id="about-mini-text">
+        <h2 class="montserrat-regular no-margin glow">About</h2>
+        <p class="montserrat-regular no-margin">Andie is a baker in northern Las Vegas. Her love of baking started from a young age. Nothing beats yummy cookies and she wants to share them with everyone!</p>
+        <h6 class="button montserrat-regular glow call" onclick="showpage(this, 'about-page')">Read more ></h6>
       </div>
     </div>
   </div>
@@ -56,6 +65,21 @@
   </div>
   <div class="page no-show" id="buy-page">
     Hello, you found the buy page. It is not yet added.
+  </div>
+  <div class="page no-show" id="about-page">
+    <div class="about" id="about">
+      <img class="about-image" src="images/Andie Hughes.jpg" alt="Andie Hughes">
+      <div class="about-mini-text" id="about-mini-text">
+        <h2 class="montserrat-regular no-margin glow">About</h2>
+        <p class="montserrat-regular no-margin">Andie is a baker in northern Las Vegas. Her love of baking started from a young age. Nothing beats yummy cookies and she wants to share them with everyone!</p>
+        <h6 class="button montserrat-regular glow call" onclick="showpage(this, 'home-page')">Home ></h6>
+      </div>
+    </div>
+  </div>
+  <div class="page no-show" id="contact-page">
+    Hello, you found the contact page. It is not yet added.
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-pinterest"></i>
   </div>
   <div class="banner">
     <h3 class="montserrat-regular no-margin">Contact:</h3>
