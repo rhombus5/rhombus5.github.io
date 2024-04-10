@@ -9,3 +9,7 @@ function showpage(button, newpage) {
   }
   document.getElementById(newpage).className = "page show";
 }
+
+function changeImage {
+  
+}
