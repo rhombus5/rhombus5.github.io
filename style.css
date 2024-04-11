@@ -66,10 +66,6 @@ i:hover {
   height: 60px;
 }
 
-.brand-name {
-  cursor: pointer;
-}
-
 .menu-box {
   display: flex;
   flex-wrap: wrap;
@@ -86,6 +82,7 @@ i:hover {
   background-color: #ffffff;
   height: 70vh;
   text-align: center;
+  transition: background-image 0.5s ease;
 }
 
 .hero-text {
