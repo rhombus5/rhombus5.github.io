@@ -24,7 +24,6 @@ function change3(div) {
 }
 
 function slideshow() {
-  console.log("flag");
   change1(homeHero);
   setTimeout(function () {
     change2(homeHero);
