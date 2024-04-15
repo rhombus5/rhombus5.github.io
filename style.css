@@ -16,7 +16,7 @@ body {
 --caribbean-current: #407076; */
 
 h1, h2 {
-  font-size: 36px;
+  font-size: 32px;
 }
 
 h3 {
@@ -28,7 +28,7 @@ h5 {
 }
 
 h6 {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 i {
@@ -68,7 +68,7 @@ i:hover {
 
 .menu-box {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   gap: 10px;
   align-items: center;
@@ -78,18 +78,21 @@ i:hover {
   background-image: url("images/Andie Chocolate Top.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: center;
   background-color: #ffffff;
-  height: 70vh;
+  height: 40vh;
   text-align: center;
   transition: background-image 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hero-text {
   background: linear-gradient(0deg, rgba(180, 185, 191, 0) 0%, rgba(180, 185, 191, 1) 100%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   gap: 10px;
   padding: 20px;
 }
@@ -140,11 +143,13 @@ i:hover {
 
 .about {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 10px;
   padding: 20px;
   background-color: #ffffff;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
 .viewer {
