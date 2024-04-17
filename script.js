@@ -35,3 +35,18 @@ function slideshow() {
 }
 
 slideshow();
+
+
+function showDescription(description) {
+  document.getElementById('defaultDescription').style.display = "none";
+  const previousDescription = document.getElementsByClassName("description show")[0];
+  if (previousDescription) {
+    previousDescription.className = "description no-show";
+  }
+
+  document.getElementById(description).className = "description show";
+}
+
+function addToCart(cookie) {
+  console.log(cookie);
+}

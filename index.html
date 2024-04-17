@@ -44,23 +44,34 @@
       <img class="about-image" src="images/Andie Hughes.jpg" alt="Andie Hughes">
       <div class="about-mini-text" id="about-mini-text">
         <h2 class="montserrat-regular no-margin glow">About</h2>
-        <p class="montserrat-regular no-margin">Andie, a passionate baker residing in the northern outskirts of bustling Las Vegas, has nurtured her love affair with baking since her tender years. From the moment she first wielded a spatula, her heart knew no greater joy than the alchemy of transforming simple ingredients into delectable treats. For Andie, the allure of baking extends far beyond the mere act of creation; it's a conduit for spreading joy and warmth, one delicious cookie at a time. With every batch that emerges from her oven, she seeks not just to tantalize taste buds but to weave a tapestry of shared moments, where laughter and sweetness intertwine. Whether it's the aroma of freshly baked cookies wafting through the neighborhood or the smiles that adorn the faces of those who indulge in her confections, Andie's mission remains steadfast—to spread happiness through the universal language of baked goods.</p>
+        <p class="montserrat-regular no-margin">Andie, a passionate baker from the outskirts of Las Vegas, has cherished baking since childhood. For her, it's more than creating treats; it's about spreading joy, one cookie at a time. With every batch, she aims to create shared moments, weaving happiness through her baked goods.</p>
         <h6 class="button montserrat-regular glow call no-margin" onclick="showpage(this, 'about-page')">Read more ></h6>
       </div>
     </div>
   </div>
   <div class="page no-show" id="browse-page">
+    <div class="cookie-description-box">
+      <p class="cookie-description show" id="defaultDescription">Click on a cookie to see a description!<br>If you like it, add it to your cart.</p>
+      <p class="cookie-description no-show" id="blueberry-twirl-description"><b>Blueberry Twirl:</b> A delightful blend of blueberries swirled into a soft, buttery dough. Each cookie contains approximately 120 calories.<br><span class="addToCart" onclick="addToCart('blueberryTwirl')">Add To Cart</span></p>
+      <p class="cookie-description no-show" id="chocolate-chip-description"><b>Chocolate Chip:</b> Classic and irresistible, loaded with rich chocolate chips in a golden-brown cookie base. Each cookie contains around 150 calories.<br><span class="addToCart" onclick="addToCart('chocolateChip')">Add To Cart</span></p>
+      <p class="cookie-description no-show" id="chocolate-description"><b>Chocolate:</b> Indulge in decadence with these rich, chocolatey cookies. Each serving provides approximately 180 calories.<br><span class="addToCart" onclick="addToCart('chocolate')">Add To Cart</span></p>
+      <p class="cookie-description no-show" id="craisin-description"><b>Craisin:</b> Bursting with the sweet-tart flavor of cranberries, these cookies offer a delightful twist. Enjoy each cookie for around 130 calories.<br><span class="addToCart" onclick="addToCart('craisin')">Add To Cart</span></p>
+      <p class="cookie-description no-show" id="frosted-stripes-description"><b>Frosted Stripes:</b> A festive treat topped with colorful frosting stripes, adding a playful touch to every bite. Each cookie contains approximately 160 calories.<br><span class="addToCart" onclick="addToCart('frostedStripes')">Add To Cart</span></p>
+      <p class="cookie-description no-show" id="macadamia-nut-description"><b>Macadamia Nut:</b> Experience the buttery crunch of macadamia nuts in every bite of these delectable cookies. Enjoy each cookie for around 170 calories.<br><span class="addToCart" onclick="addToCart('macadamiaNut')">Add To Cart</span></p>
+      <p class="cookie-description no-show" id="peanut-butter-description"><b>Peanut Butter:</b> A peanut lover's dream, these cookies are packed with peanut butter flavor. Indulge in each cookie for approximately 140 calories.<br><span class="addToCart" onclick="addToCart('peanutButter')">Add To Cart</span></p>
+      <p class="cookie-description no-show" id="snickerdoodle-description"><b>Snickerdoodle:</b> Enjoy the cozy warmth of cinnamon and sugar in these soft, pillowy cookies. Each serving provides around 130 calories.<br><span class="addToCart" onclick="addToCart('snickerdoodle')">Add To Cart</span></p>
+    </div>
     <div class="viewer">
       <div class="baking-sheet">
-        <img class="cookie" src="images/cookies/blueberry twirl.png" alt="blueberry twirl">
-        <img class="cookie" src="images/cookies/chocolate chip.png" alt="chocolate chip">
-        <img class="cookie" src="images/cookies/chocolate.png" alt="chocolate">
-        <img class="cookie" src="images/cookies/craisin.png" alt="craisin">
-        <img class="cookie" src="images/cookies/frosted stripes.png" alt="frosted stripes">
-        <img class="cookie" src="images/cookies/macadamia nut.png" alt="macadamia nut">
-        <img class="cookie" src="images/cookies/peanut butter.png" alt="peanut butter">
-        <img class="cookie" src="images/cookies/snickerdoodle.png" alt="snickerdoodle">
-      </div>
+        <img class="cookie" onclick="showDescription('blueberry-twirl-description')" id="blueberry-twirl-cookie" src="images/cookies/blueberry twirl.png" alt="blueberry twirl">
+        <img class="cookie" onclick="showDescription('chocolate-chip-description')" id="chocolate-chip-cookie" src="images/cookies/chocolate chip.png" alt="chocolate chip">
+        <img class="cookie" onclick="showDescription('chocolate-description')" id="chocolate-cookie" src="images/cookies/chocolate.png" alt="chocolate">
+        <img class="cookie" onclick="showDescription('craisin-description')" id="craisin-cookie" src="images/cookies/craisin.png" alt="craisin">
+        <img class="cookie" onclick="showDescription('frosted-stripes-description')" id="frosted-stripes-cookie" src="images/cookies/frosted stripes.png" alt="frosted stripes">
+        <img class="cookie" onclick="showDescription('macadamia-nut-description')" id="macadamia-nut-cookie" src="images/cookies/macadamia nut.png" alt="macadamia nut">
+        <img class="cookie" onclick="showDescription('peanut-butter-description')" id="peanut-butter-cookie" src="images/cookies/peanut butter.png" alt="peanut butter">
+        <img class="cookie" onclick="showDescription('snickerdoodle-description')" id="snickerdoodle-cookie" src="images/cookies/snickerdoodle.png" alt="snickerdoodle">
+      </div>      
     </div>
   </div>
   <div class="page no-show" id="buy-page">
@@ -69,9 +80,9 @@
   <div class="page no-show" id="about-page">
     <div class="about" id="about">
       <img class="about-image" src="images/Andie Hughes.jpg" alt="Andie Hughes">
-      <div class="about-mini-text" id="about-mini-text">
+      <div class="about-text" id="about-text">
         <h2 class="montserrat-regular no-margin glow">About</h2>
-        <p class="montserrat-regular no-margin">  Andie, a dedicated artisan of the baking realm, finds her haven amidst the tranquil confines of northern Las Vegas, where the desert sun kisses the land with its golden warmth. From the tender age when her tiny hands first embraced the tools of her trade, she embarked on a journey fueled by a profound passion for the culinary arts. Each sprinkle of sugar, every dollop of butter, and the delicate dance of flour and eggs became the building blocks of her dreams.
+        <p class="montserrat-regular">  Andie, a dedicated artisan of the baking realm, finds her haven amidst the tranquil confines of northern Las Vegas, where the desert sun kisses the land with its golden warmth. From the tender age when her tiny hands first embraced the tools of her trade, she embarked on a journey fueled by a profound passion for the culinary arts. Each sprinkle of sugar, every dollop of butter, and the delicate dance of flour and eggs became the building blocks of her dreams.
           <br><br>
           Growing up in the vibrant cityscape, Andie's fascination with baking blossomed into an unyielding love affair. It wasn't merely about the act of creating confections; it was a deeply ingrained desire to weave threads of happiness into the fabric of everyday life. And so, armed with her trusty whisk and an unwavering determination, she set out to share her creations with the world.
           <br><br>
