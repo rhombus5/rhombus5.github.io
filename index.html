@@ -25,7 +25,7 @@
     <div class="menu-box">
       <h6 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'home-page')">Home</h6>
       <h6 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'browse-page')">Browse</h6>
-      <h6 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'buy-page')">Buy</h6>
+      <h6 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'buy-page')">Buy<span class="buy-counter no-show" id="buy-counter">0</span></h6>
       <h6 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'about-page')">About</h6>
       <h6 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'contact-page')">Contact</h6>
     </div>
@@ -51,15 +51,15 @@
   </div>
   <div class="page no-show" id="browse-page">
     <div class="cookie-description-box">
-      <p class="cookie-description show" id="defaultDescription">Click on a cookie to see a description!<br>If you like it, add it to your cart.</p>
-      <p class="cookie-description no-show" id="blueberry-twirl-description"><b>Blueberry Twirl:</b> A delightful blend of blueberries swirled into a soft, buttery dough. Each cookie contains approximately 120 calories.<br><span class="addToCart" onclick="addToCart('blueberryTwirl')">Add To Cart</span></p>
-      <p class="cookie-description no-show" id="chocolate-chip-description"><b>Chocolate Chip:</b> Classic and irresistible, loaded with rich chocolate chips in a golden-brown cookie base. Each cookie contains around 150 calories.<br><span class="addToCart" onclick="addToCart('chocolateChip')">Add To Cart</span></p>
-      <p class="cookie-description no-show" id="chocolate-description"><b>Chocolate:</b> Indulge in decadence with these rich, chocolatey cookies. Each serving provides approximately 180 calories.<br><span class="addToCart" onclick="addToCart('chocolate')">Add To Cart</span></p>
-      <p class="cookie-description no-show" id="craisin-description"><b>Craisin:</b> Bursting with the sweet-tart flavor of cranberries, these cookies offer a delightful twist. Enjoy each cookie for around 130 calories.<br><span class="addToCart" onclick="addToCart('craisin')">Add To Cart</span></p>
-      <p class="cookie-description no-show" id="frosted-stripes-description"><b>Frosted Stripes:</b> A festive treat topped with colorful frosting stripes, adding a playful touch to every bite. Each cookie contains approximately 160 calories.<br><span class="addToCart" onclick="addToCart('frostedStripes')">Add To Cart</span></p>
-      <p class="cookie-description no-show" id="macadamia-nut-description"><b>Macadamia Nut:</b> Experience the buttery crunch of macadamia nuts in every bite of these delectable cookies. Enjoy each cookie for around 170 calories.<br><span class="addToCart" onclick="addToCart('macadamiaNut')">Add To Cart</span></p>
-      <p class="cookie-description no-show" id="peanut-butter-description"><b>Peanut Butter:</b> A peanut lover's dream, these cookies are packed with peanut butter flavor. Indulge in each cookie for approximately 140 calories.<br><span class="addToCart" onclick="addToCart('peanutButter')">Add To Cart</span></p>
-      <p class="cookie-description no-show" id="snickerdoodle-description"><b>Snickerdoodle:</b> Enjoy the cozy warmth of cinnamon and sugar in these soft, pillowy cookies. Each serving provides around 130 calories.<br><span class="addToCart" onclick="addToCart('snickerdoodle')">Add To Cart</span></p>
+      <p class="montserrat-regular cookie-description show" id="defaultDescription">Click on a cookie to see a description!<br>If you like it, add it to your cart.</p>
+      <p class="montserrat-regular cookie-description no-show" id="blueberry-twirl-description"><b>Blueberry Twirl:</b> A delightful blend of blueberries swirled into a soft, buttery dough. Each cookie contains approximately 120 calories.<br><span class="addToCart" onclick="addToCart('Blueberry Twirl')">Add To Cart</span></p>
+      <p class="montserrat-regular cookie-description no-show" id="chocolate-chip-description"><b>Chocolate Chip:</b> Classic and irresistible, loaded with rich chocolate chips in a golden-brown cookie base. Each cookie contains around 150 calories.<br><span class="addToCart" onclick="addToCart('Chocolate Chip')">Add To Cart</span></p>
+      <p class="montserrat-regular cookie-description no-show" id="chocolate-description"><b>Chocolate:</b> Indulge in decadence with these rich, chocolatey cookies. Each serving provides approximately 180 calories.<br><span class="addToCart" onclick="addToCart('Chocolate')">Add To Cart</span></p>
+      <p class="montserrat-regular cookie-description no-show" id="craisin-description"><b>Craisin:</b> Bursting with the sweet-tart flavor of cranberries, these cookies offer a delightful twist. Enjoy each cookie for around 130 calories.<br><span class="addToCart" onclick="addToCart('Craisin')">Add To Cart</span></p>
+      <p class="montserrat-regular cookie-description no-show" id="frosted-stripes-description"><b>Frosted Stripes:</b> A festive treat topped with colorful frosting stripes, adding a playful touch to every bite. Each cookie contains approximately 160 calories.<br><span class="addToCart" onclick="addToCart('Frosted Stripes')">Add To Cart</span></p>
+      <p class="montserrat-regular cookie-description no-show" id="macadamia-nut-description"><b>Macadamia Nut:</b> Experience the buttery crunch of macadamia nuts in every bite of these delectable cookies. Enjoy each cookie for around 170 calories.<br><span class="addToCart" onclick="addToCart('Macadamia Nut')">Add To Cart</span></p>
+      <p class="montserrat-regular cookie-description no-show" id="peanut-butter-description"><b>Peanut Butter:</b> A peanut lover's dream, these cookies are packed with peanut butter flavor. Indulge in each cookie for approximately 140 calories.<br><span class="addToCart" onclick="addToCart('Peanut Butter')">Add To Cart</span></p>
+      <p class="montserrat-regular cookie-description no-show" id="snickerdoodle-description"><b>Snickerdoodle:</b> Enjoy the cozy warmth of cinnamon and sugar in these soft, pillowy cookies. Each serving provides around 130 calories.<br><span class="addToCart" onclick="addToCart('Snickerdoodle')">Add To Cart</span></p>
     </div>
     <div class="viewer">
       <div class="baking-sheet">
@@ -75,10 +75,20 @@
     </div>
   </div>
   <div class="page no-show" id="buy-page">
-    Hello, you found the buy page. It is not yet added.
+    <div class="page-part" id="buy">
+      <h2 class="montserrat-regular no-margin glow">Buy</h2>
+      <div class="form">
+        <h4 class="montserrat-regular no-margin glow"><b>Your order:</b> <span id="order-summary">You haven't ordered yet.</span></h4>
+        <h4 class="montserrat-regular no-margin glow"><b>Total:</b> $<span id="order-total">0.00</span></h4>
+        <input type="email" name="myInput" placeholder="your@email.com" size="30" required>
+        <input type="password" name="myInput" placeholder="Card Placeholder" size="20" required>
+        <input type="submit" name="submitInput" value="Submit Order">
+        <input type="submit" name="resetInput" value="Reset Order">
+      </div>
+    </div>
   </div>
   <div class="page no-show" id="about-page">
-    <div class="about" id="about">
+    <div class="page-part" id="about">
       <img class="about-image" src="images/Andie Hughes.jpg" alt="Andie Hughes">
       <div class="about-text" id="about-text">
         <h2 class="montserrat-regular no-margin glow">About</h2>
@@ -96,7 +106,30 @@
     </div>
   </div>
   <div class="page no-show" id="contact-page">
-    Hello, you found the contact page. It is not yet added.
+    <div class="page-part" id="about">
+      <h2 class="montserrat-regular no-margin glow">Contact Us</h2>
+<p class="montserrat-regular">Thank you for visiting A Dash of Sugar! We value your feedback, inquiries, and suggestions. Please feel free to reach out to us using any of the methods below:</p>
+<h4 class="montserrat-regular no-margin glow">Email:</h4>
+<p class="montserrat-regular">contact@adashofsugar.com</p>
+<h4 class="montserrat-regular no-margin glow">Phone:</h4>
+<p class="montserrat-regular">+1-XXX-XXX-XXXX</p>
+<h4 class="montserrat-regular no-margin glow">Address:</h4>
+<p class="montserrat-regular">
+  A Dash of Sugar<br>
+  123 Cookie Street<br>
+  Las Vegas, NV 12345<br>
+  United States
+</p>
+<h4 class="montserrat-regular no-margin glow">Social Media:</h4>
+<ul>
+  <li class="montserrat-regular">Instagram: @adashofsugarcookies</li>
+  <li class="montserrat-regular">Facebook: /adashofsugarcookies</li>
+  <li class="montserrat-regular">Twitter: @adashofsugar</li>
+</ul>
+<h4 class="montserrat-regular no-margin glow">Business Hours:</h4>
+<p class="montserrat-regular">Monday-Friday: 9:00 AM - 5:00 PM (Pacific Time)</p>
+<p class="montserrat-regular no-margin glow">We look forward to hearing from you and making your cookie experience even sweeter!</p>
+    </div>
     <i class="fa-brands fa-instagram"></i>
     <i class="fa-brands fa-pinterest"></i>
   </div>

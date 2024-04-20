@@ -43,6 +43,10 @@ i:hover {
   cursor: pointer;
 }
 
+.button {
+  display: inline-block;
+}
+
 .banner {
   display: flex;
   flex-wrap: wrap;
@@ -72,6 +76,13 @@ i:hover {
   justify-content: space-between;
   gap: 10px;
   align-items: center;
+}
+
+.buy-counter {
+  color: white;
+  background-color: rgb(6, 152, 47);
+  border-radius: 10px;
+  text-align: center;
 }
 
 .hero {
@@ -144,7 +155,7 @@ i:hover {
   gap: 10px;
 }
 
-.about {
+.page-part {
   display: block;
   justify-content: center;
   align-items: center;
@@ -190,12 +201,16 @@ i:hover {
   gap: 10px;
 }
 
-.cookie-object {
-  width: 30%;
-  height: 30%;
+.cookie {
   cursor: pointer;
   border-radius: 100%;
-  position: relative;
+}
+
+.form {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: auto;
 }
 
 .no-margin {
@@ -304,11 +319,6 @@ i:hover {
     padding-top: 10%;
     padding-bottom: 10%;
     gap: 50px;
-  }
-
-  .cookie {
-    width: 20%;
-    height: 20%;
   }
   
 }
