@@ -93,9 +93,9 @@ function updateOrderSummary() {
 
 function updateOrderTotal() {
   let orderTotal = 0.00;
-  for (let cookie in order) {
-    if (order[cookie] !== 0) {
-      orderTotal += 1.25;
+  for (let cookies in order) {
+    if (order[cookies] !== 0) {
+      orderTotal += 1.25 * order[cookies];
     }
   }
   document.getElementById('order-total').innerHTML = orderTotal;
