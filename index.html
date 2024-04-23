@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="page no-show" id="browse-page">
-      <div class="cookie-description-box">
+      <div class="runner">
         <p class="montserrat-regular cookie-description show" id="defaultDescription">Click on a cookie to see a description! <br>If you like it, add it to your cart. </p>
         <p class="montserrat-regular cookie-description no-show" id="blueberry-twirl-description">
           <b>Blueberry Twirl:</b> A delightful blend of blueberries swirled into a soft, buttery dough. Each cookie contains approximately 120 calories. <br>
@@ -98,32 +98,36 @@
       </div>
     </div>
     <div class="page no-show" id="buy-page">
-      <div class="page-part" id="buy">
+      <div class="runner">
         <h2 class="montserrat-regular no-margin glow">Buy</h2>
+      </div>
+      <div class="page-part" id="buy">
         <div class="form">
           <h4 class="montserrat-regular no-margin glow">
             <b>Your order:</b>
             <span id="order-summary">You haven't ordered yet.</span>
           </h4>
           <h4 class="montserrat-regular no-margin glow">
-            <b>Total:</b> $ <span id="order-total">0.00</span>
+            <b>Total:</b> $<span id="order-total">0.00</span>
           </h4>
-          <input type="email" name="myInput" placeholder="your@email.com" size="30" required>
-          <input type="password" name="myInput" placeholder="Card Placeholder" size="20" required>
-          <input type="submit" name="submitInput" value="Submit Order">
-          <input type="submit" name="resetInput" value="Reset Order">
+          <input type="email" id="emailInput" name="emailInput" placeholder="your@email.com" size="30" required/>
+          <input type="password" id="cardInput" name="cardInput" placeholder="Card Placeholder" size="20" required/>
+          <button id="submitInput" onclick="submitOrder()">Place Order</button>
+          <button id="resetInput" onclick="resetOrder()">Reset Order</button>
         </div>
+        <!-- <img class="buy-page-image" src="images/Cookie Plate.jpg" alt="cookie plate"> -->
       </div>
     </div>
     <div class="page no-show" id="about-page">
-      <div class="page-part" id="about">
-        <img class="about-image" src="images/Andie Hughes.jpg" alt="Andie Hughes">
-        <div class="about-text" id="about-text">
+      <div class="runner">
+        <div class="about-header">
           <h2 class="montserrat-regular no-margin glow">About</h2>
+          <img class="large-about-image" src="images/Andie Hughes.jpg" alt="Andie Hughes">
+        </div>
+        <div class="about-text" id="about-text">
           <p class="montserrat-regular"> Andie, a dedicated artisan of the baking realm, finds her haven amidst the tranquil confines of northern Las Vegas, where the desert sun kisses the land with its golden warmth. From the tender age when her tiny hands first embraced the tools of her trade, she embarked on a journey fueled by a profound passion for the culinary arts. Each sprinkle of sugar, every dollop of butter, and the delicate dance of flour and eggs became the building blocks of her dreams. <br>
             <br> Growing up in the vibrant cityscape, Andie's fascination with baking blossomed into an unyielding love affair. It wasn't merely about the act of creating confections; it was a deeply ingrained desire to weave threads of happiness into the fabric of everyday life. And so, armed with her trusty whisk and an unwavering determination, she set out to share her creations with the world. <br>
             <br> In the heart of her cozy kitchen, Andie crafts her masterpieces with meticulous care and boundless enthusiasm. The rhythmic whir of the mixer and the heavenly scent of freshly baked goods serve as constant companions in her culinary odyssey. But for Andie, the true essence of baking lies not in the perfection of technique, but in the simple joy of bringing smiles to the faces of those she holds dear. <br>
-            <br> For Andie, there is no greater pleasure than witnessing the transformative power of her creations. Whether it's the giddy delight of a child sinking their teeth into a warm, gooey cookie or the shared laughter of friends gathered around a table laden with treats, each moment is a testament to the magic that resides within her oven. <br>
             <br> As the sun dips below the horizon and the city lights begin to twinkle in the distance, Andie's kitchen remains aglow with warmth and love. For in this humble space, she continues to fulfill her purpose—to spread happiness, one delectable morsel at a time, to all who are fortunate enough to taste the fruits of her labor. And so, the legacy of Andie the baker lives on, a beacon of sweetness in the heart of the desert landscape.
           </p>
           <h6 class="button montserrat-regular glow call no-margin" onclick="showpage(this, 'home-page')">Home ></h6>
@@ -131,13 +135,17 @@
       </div>
     </div>
     <div class="page no-show" id="contact-page">
-      <div class="page-part" id="about">
+      <div class="runner">
         <h2 class="montserrat-regular no-margin glow">Contact Us</h2>
         <p class="montserrat-regular">Thank you for visiting A Dash of Sugar! We value your feedback, inquiries, and suggestions. Please feel free to reach out to us using any of the methods below:</p>
+      </div>
+      <div class="page-part" id="about">
+        <h4 class="montserrat-regular no-margin glow">Business Hours:</h4>
+        <p class="montserrat-regular">Monday-Friday: 9:00 AM - 5:00 PM (Pacific Time)</p>
         <div class="contact-box-holder">
           <div class="contact-box" id="phone-box">
             <h4 class="montserrat-regular no-margin glow">Phone:</h4>
-            <p class="montserrat-regular no-margin">(123) 456-7890</p>
+            <p class="montserrat-regular no-margin"><a href="tel: 1234567890">(123) 456-7890</a></p>
           </div>
           <div class="contact-box" id="email-box">
             <h4 class="montserrat-regular no-margin glow">Email:</h4>
@@ -145,7 +153,7 @@
           </div>
           <div class="contact-box" id="address-box">
             <h4 class="montserrat-regular no-margin glow">Address:</h4>
-            <p class="montserrat-regular no-margin"> A Dash of Sugar <br> 123 Cookie Street <br> Las Vegas, NV 12345 <br> United States </p>
+            <p class="montserrat-regular no-margin"><a href="https://www.google.com/maps/search/A+Dash+of+Sugar+123+Cookie+Street+Las+Vegas,+NV+12345+United+States/@36.1251645,-115.3398109,11z/data=!3m1!4b1">A Dash of Sugar<br>123 Cookie Street<br>Las Vegas, NV 12345<br>United States</a></p>
           </div>
           <div class="contact-box" id="social-media-box">
             <h4 class="montserrat-regular no-margin glow">Social Media:</h4>
@@ -161,8 +169,6 @@
             </div>
           </div>
         </div>
-        <h4 class="montserrat-regular no-margin glow">Business Hours:</h4>
-        <p class="montserrat-regular">Monday-Friday: 9:00 AM - 5:00 PM (Pacific Time)</p>
         <p class="montserrat-regular no-margin glow">We look forward to hearing from you and making your cookie experience even sweeter!</p>
       </div>
     </div>

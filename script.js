@@ -70,7 +70,7 @@ function updateCounter() {
   counter.innerHTML = parseInt(counter.innerHTML) + 1;
 }
 
-const order = {
+let order = {
   'Blueberry Twirl': 0,
   'Chocolate Chip': 0,
   'Chocolate': 0,
@@ -80,6 +80,7 @@ const order = {
   'Peanut Butter': 0,
   'Snickerdoodle': 0
 }
+let orderTotal = 0.00;
 
 function updateOrderSummary() {
   let orderSummary = '<br>';
@@ -92,11 +93,43 @@ function updateOrderSummary() {
 }
 
 function updateOrderTotal() {
-  let orderTotal = 0.00;
   for (let cookies in order) {
     if (order[cookies] !== 0) {
-      orderTotal += 1.25 * order[cookies];
+      orderTotal += .75 * order[cookies];
     }
   }
-  document.getElementById('order-total').innerHTML = orderTotal;
+  document.getElementById('order-total').innerHTML = (Math.round(orderTotal * 100) / 100).toFixed(2);
 }
+
+function resetOrder() {
+  order = {
+    'Blueberry Twirl': 0,
+    'Chocolate Chip': 0,
+    'Chocolate': 0,
+    'Craisin': 0,
+    'Frosted Stripes': 0,
+    'Macadamia Nut': 0,
+    'Peanut Butter': 0,
+    'Snickerdoodle': 0
+  }
+  orderTotal = 0.00;
+  document.getElementById('order-summary').innerHTML = "You haven't ordered yet.";
+  document.getElementById('order-total').innerHTML = (Math.round(0 * 100) / 100).toFixed(2);
+  document.getElementById('buy-counter').innerHTML = 0;
+  document.getElementById('buy-counter').className = "buy-counter no-show";
+}
+
+function submitOrder() {
+  var email = document.getElementById("emailInput").value;
+  console.log(email);
+  var cardNumber = document.getElementById("cardInput").value;
+  console.log(cardNumber);
+  if (email.trim() === "" || cardNumber.trim() === "") {
+    alert("Please enter your purchase details!");
+  } else if (orderTotal !== undefined && orderTotal !== 0.00) {
+    alert("Your order has been submitted!");
+    resetOrder();
+  } else {
+    alert("You haven't ordered anything yet!");
+  }
+};

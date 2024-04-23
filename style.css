@@ -25,11 +25,11 @@ h1, h2 {
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 h4 {
-  font-size: 16px;
+  font-size: 22px;
 }
 
 h5 {
@@ -72,6 +72,24 @@ i:hover {
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+input {
+  padding: 10px;
+  border: solid 1px #407076;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #407076;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px;
+  border: solid 1px #407076;
+  border-radius: 5px;
+  background-color: #407076;
+  color: white;
+  cursor: pointer;
 }
 
 .cookie-icon {
@@ -156,6 +174,22 @@ i:hover {
   margin: 15px;
 }
 
+.large-about-image {
+  height: 400px;
+  border-radius: 5px;
+  margin: 15px;
+}
+
+.about-text {
+  width: 75%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+  text-align: start;
+}
+
 .about-mini-text {
   display: flex;
   flex-direction: column;
@@ -165,19 +199,19 @@ i:hover {
 }
 
 .page-part {
-  display: block;
+  display: flex;
   justify-content: center;
-  align-items: center;
   gap: 10px;
   padding: 20px;
   background-color: #ffffff;
   flex-wrap: wrap;
-  align-content: center;
+  flex-direction: column;
 }
 
-.cookie-description-box {
-  display: block;
+.runner {
+  display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   gap: 10px;
   padding: 20px;
@@ -219,7 +253,17 @@ i:hover {
   display: inline-flex;
   flex-direction: column;
   gap: 10px;
-  margin: auto;
+}
+
+.buy-page-image {
+  width: 50%;
+  object-fit: contain;
+  border-radius: 5px;
+  margin: 15px;
+}
+
+.about-header {
+  text-align: center;
 }
 
 .contact-box-holder {
@@ -230,6 +274,7 @@ i:hover {
   padding: 20px;
   background-color: #faa33c;
   align-items: center;
+  border-radius: 10px;
 }
 
 .contact-box {
@@ -306,11 +351,16 @@ i:hover {
     font-size: 48px;
   }
 
+  .page-part {
+    padding: 20px 80px;
+  }
+
   .banner {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
+    padding: 20px 80px;
   }
 
   .menu-box {
@@ -318,7 +368,7 @@ i:hover {
   }
 
   .menu-box .call {
-    width: 100px; /* Set the desired width here */
+    width: 100px;
     font-size: 24px;
     transition: 0.5s;
     cursor: pointer;
@@ -353,6 +403,7 @@ i:hover {
 
   .about-mini {
     flex-wrap: nowrap;
+    padding: 20px 80px;
   }
 
   .baking-sheet {
@@ -360,12 +411,27 @@ i:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 450px; */
     padding-left: 15%;
     padding-right: 15%;
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding-top: 20%;
+    padding-bottom: 20%;
     gap: 50px;
+  }
+
+  .form {
+    width: 50%;
+  }
+
+  .large-about-image {
+    height: 450px;
+    border-radius: 5px;
+    margin: 15px;
+  }
+
+  .about-text {
+    width: 65%;
+    height: auto;
+    text-align: start;
   }
   
 }
