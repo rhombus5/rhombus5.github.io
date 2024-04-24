@@ -13,31 +13,29 @@ body {
   margin: 0 0;
 }
 
-/* CSS HEX */
-/* --orange-peel: #faa33c;
---saffron: #fdc758;
---bone: #ded5c3;
---black: #000000;
---caribbean-current: #407076; */
-
 h1, h2 {
-  font-size: 32px;
+  font-size: 36px;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 h4 {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 h5 {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 h6 {
-  font-size: 12px;
+  font-size: 14px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 24px;
 }
 
 i {
@@ -53,7 +51,7 @@ i:hover {
 }
 
 .button {
-  display: inline-block;
+  width: auto !important;
 }
 
 .banner {
@@ -76,25 +74,31 @@ i:hover {
 
 input {
   padding: 10px;
-  border: solid 1px #407076;
+  border: solid 2px black;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: white;
   color: #407076;
   cursor: pointer;
 }
 
 button {
   padding: 10px;
-  border: solid 1px #407076;
+  border: solid 2px black;
   border-radius: 5px;
   background-color: #407076;
+  transition: 0.5s;
   color: white;
   cursor: pointer;
 }
 
+button:hover {
+  background-color: #faa33c;
+  color: white;
+}
+
 .cookie-icon {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
 }
 
 .menu-box {
@@ -107,7 +111,7 @@ button {
 
 .buy-counter {
   color: white;
-  background-color: rgb(6, 152, 47);
+  background-color: crimson;
   border-radius: 10px;
   text-align: center;
 }
@@ -117,7 +121,7 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #ffffff;
+  background-color: white;
   height: 40vh;
   text-align: center;
   transition: background-image 0.5s ease;
@@ -151,7 +155,7 @@ button {
 }
 
 .call:hover {
-  background: #faa33c;
+  background: #407076;
   transition: 0.5s;
   cursor: pointer;
   color: white;
@@ -203,9 +207,10 @@ button {
   justify-content: center;
   gap: 10px;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: white;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
 }
 
 .runner {
@@ -224,10 +229,11 @@ button {
   text-decoration: underline;
   color: white;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .viewer {
-  background-color: #ffffff;
+  background-color: white;
 }
 
 .baking-sheet {
@@ -235,29 +241,40 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #ffffff;
-  text-align: center;
-  display: flex;  
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 25% 5%;
-  gap: 10px;
+  background-color: white;
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr; 
+  gap: 5px 5px; 
+  grid-template-areas: 
+    ". ."
+    ". ."
+    ". ."
+    ". ."; 
+  justify-content: center; 
+  align-content: center; 
+  justify-items: center; 
+  align-items: center;  
+  padding: 20% 25%;
 }
 
 .cookie {
   cursor: pointer;
   border-radius: 100%;
+  width: 100%;
 }
 
 .form {
+  width: 45%;
+  min-width: 350px;
   display: inline-flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.buy-page-image {
-  width: 50%;
-  object-fit: contain;
+.page-part img {
+  width: 45%;
+  min-width: 350px;
   border-radius: 5px;
   margin: 15px;
 }
@@ -286,7 +303,7 @@ button {
   border-radius: 10px;
   height: 250px;
   width: 250px;
-  background-color: #ffffff;
+  background-color: white;
   align-items: center;
   text-align: center;
 }
@@ -302,7 +319,7 @@ button {
 }
 
 .glow {
-  text-shadow: 0 0 10px #ffffff;
+  text-shadow: 0 0 10px white;
 }
 
 .montserrat-regular {
@@ -328,23 +345,28 @@ button {
 
 @media screen and (min-width: 600px) {
   h1, h2 {
-    font-size: 60px;
+    font-size: 45px;
   }
-
+  
   h3 {
-    font-size: 32px;
+    font-size: 25px;
   }
-
+  
   h4 {
-    font-size: 28px;
+    font-size: 22px;
   }
-
+  
   h5 {
-    font-size: 26px;
+    font-size: 20px;
   }
-
+  
   h6 {
-    font-size: 24px;
+    font-size: 18px;
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 30px;
   }
 
   i {
@@ -381,7 +403,7 @@ button {
   }
 
   .menu-box {
-    gap: 20px;
+    gap: 10px;
   }
   
   .hero {
@@ -408,18 +430,29 @@ button {
 
   .baking-sheet {
     background-image: url("images/baking-sheet-horizontal.png");
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 20%;
-    padding-bottom: 20%;
-    gap: 50px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 5px 5px; 
+    grid-template-areas: 
+      ". . . ."
+      ". . . ."; 
+    justify-content: center; 
+    align-content: center; 
+    justify-items: center; 
+    align-items: center; 
+    height: 400px;
+    padding: 10% 15%;
   }
 
   .form {
-    width: 50%;
+    width: 45%;
+    min-width: 300px;
+  }
+
+  .page-part img {
+    width: 45%;
+    min-width: 300px;
   }
 
   .large-about-image {

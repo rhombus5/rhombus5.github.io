@@ -21,21 +21,20 @@
         </div>
       </div>
       <div class="menu-box">
-        <h6 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'home-page')">Home</h6>
-        <h6 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'browse-page')">Browse</h6>
-        <h6 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'buy-page')">Buy <span class="buy-counter no-show" id="buy-counter">0</span>
-        </h6>
-        <h6 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'about-page')">About</h6>
-        <h6 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'contact-page')">Contact</h6>
+        <h5 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'home-page')">Home</h5>
+        <h5 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'browse-page')">Browse</h5>
+        <h5 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'buy-page')">Buy <span class="buy-counter no-show" id="buy-counter">0</span></h5>
+        <h5 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'about-page')">About</h5>
+        <h5 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'contact-page')">Contact</h5>
       </div>
     </div>
     <div class="page show" id="home-page">
       <div class="hero" id="home-hero">
-        <div class="hero-text no-margin">
+        <div class="hero-text">
           <h2 class="montserrat-regular no-margin glow">Tasty. Made for you!</h2>
           <div class="hero-call">
-            <h6 class="button montserrat-regular no-margin glow call" onclick="showpage(this, 'browse-page')">browse ></h6>
-            <h6 class="button montserrat-regular no-margin glow call" onclick="showpage(this, 'buy-page')">buy ></h6>
+            <h5 class="button montserrat-regular no-margin glow call" onclick="showpage(this, 'browse-page')">Browse ></h5>
+            <h5 class="button montserrat-regular no-margin glow call" onclick="showpage(this, 'buy-page')">Buy ></h5>
           </div>
         </div>
       </div>
@@ -44,7 +43,7 @@
         <div class="about-mini-text" id="about-mini-text">
           <h2 class="montserrat-regular no-margin glow">About</h2>
           <p class="montserrat-regular no-margin">Andie, a passionate baker from the outskirts of Las Vegas, has cherished baking since childhood. For her, it's more than creating treats; it's about spreading joy, one cookie at a time. With every batch, she aims to create shared moments, weaving happiness through her baked goods.</p>
-          <h6 class="button montserrat-regular glow call no-margin" onclick="showpage(this, 'about-page')">Read more ></h6>
+          <h5 class="button montserrat-regular glow call no-margin" onclick="showpage(this, 'about-page')">Read More ></h5>
         </div>
       </div>
     </div>
@@ -86,14 +85,30 @@
       </div>
       <div class="viewer">
         <div class="baking-sheet">
-          <img class="cookie" onclick="showDescription('blueberry-twirl-description')" id="blueberry-twirl-cookie" src="images/cookies/blueberry twirl.png" alt="blueberry twirl">
-          <img class="cookie" onclick="showDescription('chocolate-chip-description')" id="chocolate-chip-cookie" src="images/cookies/chocolate chip.png" alt="chocolate chip">
-          <img class="cookie" onclick="showDescription('chocolate-description')" id="chocolate-cookie" src="images/cookies/chocolate.png" alt="chocolate">
-          <img class="cookie" onclick="showDescription('craisin-description')" id="craisin-cookie" src="images/cookies/craisin.png" alt="craisin">
-          <img class="cookie" onclick="showDescription('frosted-stripes-description')" id="frosted-stripes-cookie" src="images/cookies/frosted stripes.png" alt="frosted stripes">
-          <img class="cookie" onclick="showDescription('macadamia-nut-description')" id="macadamia-nut-cookie" src="images/cookies/macadamia nut.png" alt="macadamia nut">
-          <img class="cookie" onclick="showDescription('peanut-butter-description')" id="peanut-butter-cookie" src="images/cookies/peanut butter.png" alt="peanut butter">
-          <img class="cookie" onclick="showDescription('snickerdoodle-description')" id="snickerdoodle-cookie" src="images/cookies/snickerdoodle.png" alt="snickerdoodle">
+          <div class="cookie-holder" onclick="showDescription('blueberry-twirl-description')" id="blueberry-twirl-cookie-div">
+            <img class="cookie" id="blueberry-twirl-cookie" src="images/cookies/blueberry twirl.png" alt="blueberry twirl">
+          </div>
+          <div class="cookie-holder" onclick="showDescription('chocolate-chip-description')" id="chocolate-chip-cookie-div">
+            <img class="cookie" id="chocolate-chip-cookie" src="images/cookies/chocolate chip.png" alt="chocolate chip">
+          </div>
+          <div class="cookie-holder" onclick="showDescription('chocolate-description')" id="chocolate-cookie-div">
+            <img class="cookie" id="chocolate-cookie" src="images/cookies/chocolate.png" alt="chocolate">
+          </div>
+          <div class="cookie-holder" onclick="showDescription('craisin-description')" id="craisin-cookie-div">
+            <img class="cookie" id="craisin-cookie" src="images/cookies/craisin.png" alt="craisin">
+          </div>
+          <div class="cookie-holder" onclick="showDescription('frosted-stripes-description')" id="frosted-stripes-cookie-div">
+            <img class="cookie" id="frosted-stripes-cookie" src="images/cookies/frosted stripes.png" alt="frosted stripes">
+          </div>
+          <div class="cookie-holder" onclick="showDescription('macadamia-nut-description')" id="macadamia-nut-cookie-div">
+            <img class="cookie" id="macadamia-nut-cookie" src="images/cookies/macadamia nut.png" alt="macadamia nut">
+          </div>
+          <div class="cookie-holder" onclick="showDescription('peanut-butter-description')" id="peanut-butter-cookie-div">
+            <img class="cookie" id="peanut-butter-cookie" src="images/cookies/peanut butter.png" alt="peanut butter">
+          </div>
+          <div class="cookie-holder" onclick="showDescription('snickerdoodle-description')" id="snickerdoodle-cookie-div">
+            <img class="cookie" id="snickerdoodle-cookie" src="images/cookies/snickerdoodle.png" alt="snickerdoodle">
+          </div>
         </div>
       </div>
     </div>
@@ -115,7 +130,7 @@
           <button id="submitInput" onclick="submitOrder()">Place Order</button>
           <button id="resetInput" onclick="resetOrder()">Reset Order</button>
         </div>
-        <!-- <img class="buy-page-image" src="images/Cookie Plate.jpg" alt="cookie plate"> -->
+        <img src="images/Cookie Plate.jpg" alt="cookie plate">
       </div>
     </div>
     <div class="page no-show" id="about-page">

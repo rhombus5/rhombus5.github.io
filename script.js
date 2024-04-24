@@ -48,17 +48,15 @@ function showDescription(description) {
 }
 
 function addToCart(cookie) {
-  console.log(cookie);
   order[cookie] ++;
-  console.log(order);
-  toggleHidden('buy-counter');
   updateCounter();
   updateOrderSummary();
   updateOrderTotal();
+  toggleHidden('buy-counter');
 }
 
 function toggleHidden(thing) {
-  if (document.getElementById(thing).className = "buy-counter no-show") {
+  if (orderTotal > 0) {
     document.getElementById(thing).className = "buy-counter show";
   } else {
     document.getElementById(thing).className = "buy-counter no-show";
@@ -93,9 +91,10 @@ function updateOrderSummary() {
 }
 
 function updateOrderTotal() {
+  orderTotal = 0; // Reset orderTotal to zero
   for (let cookies in order) {
     if (order[cookies] !== 0) {
-      orderTotal += .75 * order[cookies];
+      orderTotal += (0.75 * order[cookies]);
     }
   }
   document.getElementById('order-total').innerHTML = (Math.round(orderTotal * 100) / 100).toFixed(2);
@@ -113,7 +112,7 @@ function resetOrder() {
     'Snickerdoodle': 0
   }
   orderTotal = 0.00;
-  document.getElementById('order-summary').innerHTML = "You haven't ordered yet.";
+  document.getElementById('order-summary').innerHTML = "Thanks for ordering. Want more?";
   document.getElementById('order-total').innerHTML = (Math.round(0 * 100) / 100).toFixed(2);
   document.getElementById('buy-counter').innerHTML = 0;
   document.getElementById('buy-counter').className = "buy-counter no-show";
@@ -121,9 +120,7 @@ function resetOrder() {
 
 function submitOrder() {
   var email = document.getElementById("emailInput").value;
-  console.log(email);
   var cardNumber = document.getElementById("cardInput").value;
-  console.log(cardNumber);
   if (email.trim() === "" || cardNumber.trim() === "") {
     alert("Please enter your purchase details!");
   } else if (orderTotal !== undefined && orderTotal !== 0.00) {
