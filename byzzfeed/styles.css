@@ -40,9 +40,11 @@ h1 {
 .moment img {
   width: 100%;
   max-width: 600px;
-  height: auto;
+  height: 400px; /* Fixed height */
+  object-fit: cover;
   display: block;
   margin: 0 auto;
+  border-radius: 4px;
 }
 
 .image-credit {
