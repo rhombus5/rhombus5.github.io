@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>A DASH of Sugar</title>
+    <link rel="icon" type="image/x-icon" href="/images/cookie-icon.ico">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3249349d53.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="brand-box">
+        <img src="images/cookie-icon.png" alt="cookie icon" class="cookie-icon">
+        <div class="brand-name">
+          <h1 class="great-vibes-regular no-margin glow">A Dash of Sugar</h1>
+          <h3 class="montserrat-regular no-margin">The best baked goods around!</h3>
+        </div>
+      </div>
+      <div class="menu-box">
+        <h5 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'home-page')">Home</h5>
+        <h5 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'browse-page')">Browse</h5>
+        <h5 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'buy-page')">Buy <span class="buy-counter no-show" id="buy-counter">0</span></h5>
+        <h5 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'about-page')">About</h5>
+        <h5 class="montserrat-regular no-margin glow call" onclick="showpage(this, 'contact-page')">Contact</h5>
+      </div>
+    </div>
+    <div class="page show" id="home-page">
+      <div class="hero" id="home-hero">
+        <div class="hero-text">
+          <h2 class="montserrat-regular no-margin glow">Tasty. Made for you!</h2>
+          <div class="hero-call">
+            <h5 class="button montserrat-regular no-margin glow call" onclick="showpage(this, 'browse-page')">Browse ></h5>
+            <h5 class="button montserrat-regular no-margin glow call" onclick="showpage(this, 'buy-page')">Buy ></h5>
+          </div>
+        </div>
+      </div>
+      <div class="about-mini" id="about-mini">
+        <img class="about-image" src="images/Andie Hughes.jpg" alt="Andie Hughes">
+        <div class="about-mini-text" id="about-mini-text">
+          <h2 class="montserrat-regular no-margin glow">About</h2>
+          <p class="montserrat-regular no-margin">Andie, a passionate baker from the outskirts of Las Vegas, has cherished baking since childhood. For her, it's more than creating treats; it's about spreading joy, one cookie at a time. With every batch, she aims to create shared moments, weaving happiness through her baked goods.</p>
+          <h5 class="button montserrat-regular glow call no-margin" onclick="showpage(this, 'about-page')">Read More ></h5>
+        </div>
+      </div>
+    </div>
+    <div class="page no-show" id="browse-page">
+      <div class="runner">
+        <p class="montserrat-regular cookie-description show" id="defaultDescription">Click on a cookie to see a description! <br>If you like it, add it to your cart. </p>
+        <p class="montserrat-regular cookie-description no-show" id="blueberry-twirl-description">
+          <b>Blueberry Twirl:</b> A delightful blend of blueberries swirled into a soft, buttery dough. Each cookie contains approximately 120 calories. <br>
+          <span class="addToCart" onclick="addToCart('Blueberry Twirl')">Add To Cart</span>
+        </p>
+        <p class="montserrat-regular cookie-description no-show" id="chocolate-chip-description">
+          <b>Chocolate Chip:</b> Classic and irresistible, loaded with rich chocolate chips in a golden-brown cookie base. Each cookie contains around 150 calories. <br>
+          <span class="addToCart" onclick="addToCart('Chocolate Chip')">Add To Cart</span>
+        </p>
+        <p class="montserrat-regular cookie-description no-show" id="chocolate-description">
+          <b>Chocolate:</b> Indulge in decadence with these rich, chocolatey cookies. Each serving provides approximately 180 calories. <br>
+          <span class="addToCart" onclick="addToCart('Chocolate')">Add To Cart</span>
+        </p>
+        <p class="montserrat-regular cookie-description no-show" id="craisin-description">
+          <b>Craisin:</b> Bursting with the sweet-tart flavor of cranberries, these cookies offer a delightful twist. Enjoy each cookie for around 130 calories. <br>
+          <span class="addToCart" onclick="addToCart('Craisin')">Add To Cart</span>
+        </p>
+        <p class="montserrat-regular cookie-description no-show" id="frosted-stripes-description">
+          <b>Frosted Stripes:</b> A festive treat topped with colorful frosting stripes, adding a playful touch to every bite. Each cookie contains approximately 160 calories. <br>
+          <span class="addToCart" onclick="addToCart('Frosted Stripes')">Add To Cart</span>
+        </p>
+        <p class="montserrat-regular cookie-description no-show" id="macadamia-nut-description">
+          <b>Macadamia Nut:</b> Experience the buttery crunch of macadamia nuts in every bite of these delectable cookies. Enjoy each cookie for around 170 calories. <br>
+          <span class="addToCart" onclick="addToCart('Macadamia Nut')">Add To Cart</span>
+        </p>
+        <p class="montserrat-regular cookie-description no-show" id="peanut-butter-description">
+          <b>Peanut Butter:</b> A peanut lover's dream, these cookies are packed with peanut butter flavor. Indulge in each cookie for approximately 140 calories. <br>
+          <span class="addToCart" onclick="addToCart('Peanut Butter')">Add To Cart</span>
+        </p>
+        <p class="montserrat-regular cookie-description no-show" id="snickerdoodle-description">
+          <b>Snickerdoodle:</b> Enjoy the cozy warmth of cinnamon and sugar in these soft, pillowy cookies. Each serving provides around 130 calories. <br>
+          <span class="addToCart" onclick="addToCart('Snickerdoodle')">Add To Cart</span>
+        </p>
+      </div>
+      <div class="viewer">
+        <div class="baking-sheet">
+          <div class="cookie-holder" onclick="showDescription('blueberry-twirl-description')" id="blueberry-twirl-cookie-div">
+            <img class="cookie" id="blueberry-twirl-cookie" src="images/cookies/blueberry twirl.png" alt="blueberry twirl">
+          </div>
+          <div class="cookie-holder" onclick="showDescription('chocolate-chip-description')" id="chocolate-chip-cookie-div">
+            <img class="cookie" id="chocolate-chip-cookie" src="images/cookies/chocolate chip.png" alt="chocolate chip">
+          </div>
+          <div class="cookie-holder" onclick="showDescription('chocolate-description')" id="chocolate-cookie-div">
+            <img class="cookie" id="chocolate-cookie" src="images/cookies/chocolate.png" alt="chocolate">
+          </div>
+          <div class="cookie-holder" onclick="showDescription('craisin-description')" id="craisin-cookie-div">
+            <img class="cookie" id="craisin-cookie" src="images/cookies/craisin.png" alt="craisin">
+          </div>
+          <div class="cookie-holder" onclick="showDescription('frosted-stripes-description')" id="frosted-stripes-cookie-div">
+            <img class="cookie" id="frosted-stripes-cookie" src="images/cookies/frosted stripes.png" alt="frosted stripes">
+          </div>
+          <div class="cookie-holder" onclick="showDescription('macadamia-nut-description')" id="macadamia-nut-cookie-div">
+            <img class="cookie" id="macadamia-nut-cookie" src="images/cookies/macadamia nut.png" alt="macadamia nut">
+          </div>
+          <div class="cookie-holder" onclick="showDescription('peanut-butter-description')" id="peanut-butter-cookie-div">
+            <img class="cookie" id="peanut-butter-cookie" src="images/cookies/peanut butter.png" alt="peanut butter">
+          </div>
+          <div class="cookie-holder" onclick="showDescription('snickerdoodle-description')" id="snickerdoodle-cookie-div">
+            <img class="cookie" id="snickerdoodle-cookie" src="images/cookies/snickerdoodle.png" alt="snickerdoodle">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page no-show" id="buy-page">
+      <div class="runner">
+        <h2 class="montserrat-regular no-margin glow">Buy</h2>
+      </div>
+      <div class="page-part" id="buy">
+        <div class="form">
+          <h4 class="montserrat-regular no-margin glow">
+            <b>Your order:</b>
+            <span id="order-summary">You haven't ordered yet.</span>
+          </h4>
+          <h4 class="montserrat-regular no-margin glow">
+            <b>Total:</b> $<span id="order-total">0.00</span>
+          </h4>
+          <input type="email" id="emailInput" name="emailInput" placeholder="your@email.com" size="30" required/>
+          <input type="password" id="cardInput" name="cardInput" placeholder="Card Placeholder" size="20" required/>
+          <button id="submitInput" onclick="submitOrder()">Place Order</button>
+          <button id="resetInput" onclick="resetOrder()">Reset Order</button>
+        </div>
+        <img src="images/Cookie Plate.jpg" alt="cookie plate">
+      </div>
+    </div>
+    <div class="page no-show" id="about-page">
+      <div class="runner">
+        <div class="about-header">
+          <h2 class="montserrat-regular no-margin glow">About</h2>
+          <img class="large-about-image" src="images/Andie Hughes.jpg" alt="Andie Hughes">
+        </div>
+        <div class="about-text" id="about-text">
+          <p class="montserrat-regular"> Andie, a dedicated artisan of the baking realm, finds her haven amidst the tranquil confines of northern Las Vegas, where the desert sun kisses the land with its golden warmth. From the tender age when her tiny hands first embraced the tools of her trade, she embarked on a journey fueled by a profound passion for the culinary arts. Each sprinkle of sugar, every dollop of butter, and the delicate dance of flour and eggs became the building blocks of her dreams. <br>
+            <br> Growing up in the vibrant cityscape, Andie's fascination with baking blossomed into an unyielding love affair. It wasn't merely about the act of creating confections; it was a deeply ingrained desire to weave threads of happiness into the fabric of everyday life. And so, armed with her trusty whisk and an unwavering determination, she set out to share her creations with the world. <br>
+            <br> As the sun dips below the horizon and the city lights begin to twinkle in the distance, Andie's kitchen remains aglow with warmth and love. For in this humble space, she continues to fulfill her purpose—to spread happiness, one delectable morsel at a time, to all who are fortunate enough to taste the fruits of her labor. And so, the legacy of Andie the baker lives on, a beacon of sweetness in the heart of the desert landscape.
+          </p>
+          <h6 class="button montserrat-regular glow call no-margin" onclick="showpage(this, 'home-page')">Home ></h6>
+        </div>
+      </div>
+    </div>
+    <div class="page no-show" id="contact-page">
+      <div class="runner">
+        <h2 class="montserrat-regular no-margin glow">Contact Us</h2>
+        <p class="montserrat-regular">Thank you for visiting A Dash of Sugar! We value your feedback, inquiries, and suggestions. Please feel free to reach out to us using any of the methods below:</p>
+      </div>
+      <div class="page-part" id="about">
+        <h4 class="montserrat-regular no-margin glow">Business Hours:</h4>
+        <p class="montserrat-regular">Monday-Friday: 9:00 AM - 5:00 PM (Pacific Time)</p>
+        <div class="contact-box-holder">
+          <div class="contact-box" id="phone-box">
+            <h4 class="montserrat-regular no-margin glow">Phone:</h4>
+            <p class="montserrat-regular no-margin"><a href="tel: 1234567890">(123) 456-7890</a></p>
+          </div>
+          <div class="contact-box" id="email-box">
+            <h4 class="montserrat-regular no-margin glow">Email:</h4>
+            <p class="montserrat-regular no-margin"><a href="mailto: contact@adashofsugar.com">contact@adashofsugar.com</a></p>
+          </div>
+          <div class="contact-box" id="address-box">
+            <h4 class="montserrat-regular no-margin glow">Address:</h4>
+            <p class="montserrat-regular no-margin"><a href="https://www.google.com/maps/search/A+Dash+of+Sugar+123+Cookie+Street+Las+Vegas,+NV+12345+United+States/@36.1251645,-115.3398109,11z/data=!3m1!4b1" target="_blank">A Dash of Sugar<br>123 Cookie Street<br>Las Vegas, NV 12345<br>United States</a></p>
+          </div>
+          <div class="contact-box" id="social-media-box">
+            <h4 class="montserrat-regular no-margin glow">Social Media:</h4>
+            <ul>
+              <li class="montserrat-regular no-margin">Instagram: <a href="https://instagram.com/dashofsugarcookies" target="_blank">@adashofsugarcookies</a></li>
+              <li class="montserrat-regular no-margin">Facebook: <a href="https://facebook.com/adashofsugarcookies" target="_blank">/adashofsugarcookies</a></li>
+              <li class="montserrat-regular no-margin">Twitter: <a href="https://twitter.com/adashofsugar" target="_blank">@adashofsugar</a></li>
+            </ul>
+            <div class="contact-icons">
+              <a href="https://instagram.com/dashofsugarcookies" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://facebook.com/adashofsugarcookies" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://twitter.com/adashofsugar" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <p class="montserrat-regular no-margin glow">We look forward to hearing from you and making your cookie experience even sweeter!</p>
+      </div>
+    </div>
+    <div class="banner">
+      <h3 class="montserrat-regular no-margin">Contact:</h3>
+      <h3 class="montserrat-regular no-margin"><a href="tel: 1234567890">(123) 456-7890</a></h3>
+      <h3 class="montserrat-regular no-margin"><a href="mailto: contact@adashofsugar.com">contact@adashofsugar.com</a></h3>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
